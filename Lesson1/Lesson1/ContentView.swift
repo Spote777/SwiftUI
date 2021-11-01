@@ -6,11 +6,23 @@
 //
 
 import SwiftUI
+import Combine
 
-struct ContentView: View {
+struct ContentView: View {    
+    
+    @State private var shouldShowMainView: Bool = false
+    
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        NavigationView {
+            HStack {
+                SignIn(isUserAuthorization: $shouldShowMainView)
+                
+                NavigationLink(destination: MainView(), isActive: $shouldShowMainView) {
+                    EmptyView()
+                }
+            }
+        }
+        .navigationViewStyle(StackNavigationViewStyle())
     }
 }
 
