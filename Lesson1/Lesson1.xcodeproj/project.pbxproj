@@ -32,6 +32,8 @@
 		A2DF841D27419F16007FA045 /* GroupsRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2DF841C27419F16007FA045 /* GroupsRowView.swift */; };
 		A2DF841F27419F27007FA045 /* GroupsPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2DF841E27419F27007FA045 /* GroupsPage.swift */; };
 		A2DF84212741A04E007FA045 /* VKLoginWebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2DF84202741A04E007FA045 /* VKLoginWebView.swift */; };
+		A2DF84232741A4D3007FA045 /* LikeButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2DF84222741A4D3007FA045 /* LikeButton.swift */; };
+		A2DF84262741A54F007FA045 /* TouchGestureViewModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2DF84252741A54F007FA045 /* TouchGestureViewModifier.swift */; };
 		A2EF83BA2724351700BFDAA7 /* SwiftUI-LessonApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2EF83B92724351700BFDAA7 /* SwiftUI-LessonApp.swift */; };
 		A2EF83BC2724351700BFDAA7 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2EF83BB2724351700BFDAA7 /* ContentView.swift */; };
 		A2EF83BE2724351A00BFDAA7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A2EF83BD2724351A00BFDAA7 /* Assets.xcassets */; };
@@ -67,6 +69,8 @@
 		A2DF841C27419F16007FA045 /* GroupsRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupsRowView.swift; sourceTree = "<group>"; };
 		A2DF841E27419F27007FA045 /* GroupsPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupsPage.swift; sourceTree = "<group>"; };
 		A2DF84202741A04E007FA045 /* VKLoginWebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VKLoginWebView.swift; sourceTree = "<group>"; };
+		A2DF84222741A4D3007FA045 /* LikeButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikeButton.swift; sourceTree = "<group>"; };
+		A2DF84252741A54F007FA045 /* TouchGestureViewModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TouchGestureViewModifier.swift; sourceTree = "<group>"; };
 		A2EF83B62724351700BFDAA7 /* Lesson1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Lesson1.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A2EF83B92724351700BFDAA7 /* SwiftUI-LessonApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SwiftUI-LessonApp.swift"; sourceTree = "<group>"; };
 		A2EF83BB2724351700BFDAA7 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -196,6 +200,15 @@
 			path = Extension;
 			sourceTree = "<group>";
 		};
+		A2DF84242741A53C007FA045 /* Animation */ = {
+			isa = PBXGroup;
+			children = (
+				A2DF84222741A4D3007FA045 /* LikeButton.swift */,
+				A2DF84252741A54F007FA045 /* TouchGestureViewModifier.swift */,
+			);
+			path = Animation;
+			sourceTree = "<group>";
+		};
 		A2EF83AD2724351700BFDAA7 = {
 			isa = PBXGroup;
 			children = (
@@ -219,6 +232,7 @@
 			children = (
 				A2DF840827419B20007FA045 /* Session */,
 				A2DF841727419EA7007FA045 /* Extension */,
+				A2DF84242741A53C007FA045 /* Animation */,
 				A2DF840B27419CC4007FA045 /* Services */,
 				A28873B427304FA600E0F3E1 /* Model */,
 				A288739C27304BD500E0F3E1 /* ViewModifier */,
@@ -231,8 +245,8 @@
 				A2BBB6712725FBE30022993F /* MainView.swift */,
 				A2DF84202741A04E007FA045 /* VKLoginWebView.swift */,
 				A2EF83BB2724351700BFDAA7 /* ContentView.swift */,
-				A2EF83B92724351700BFDAA7 /* SwiftUI-LessonApp.swift */,
 				A2EF83BD2724351A00BFDAA7 /* Assets.xcassets */,
+				A2EF83B92724351700BFDAA7 /* SwiftUI-LessonApp.swift */,
 				A2EF83BF2724351A00BFDAA7 /* Preview Content */,
 			);
 			path = Lesson1;
@@ -388,11 +402,13 @@
 				A2DF840D27419CD7007FA045 /* GroupsApi.swift in Sources */,
 				A288739E27304BEA00E0F3E1 /* ViewModifier.swift in Sources */,
 				A28873B627304FC500E0F3E1 /* FriendsModel.swift in Sources */,
+				A2DF84232741A4D3007FA045 /* LikeButton.swift in Sources */,
 				A2DF841D27419F16007FA045 /* GroupsRowView.swift in Sources */,
 				A28873AB27304E2C00E0F3E1 /* NewsTable.swift in Sources */,
 				A2DF84212741A04E007FA045 /* VKLoginWebView.swift in Sources */,
 				A28873A627304DBE00E0F3E1 /* NewsPrototype.swift in Sources */,
 				A2DF841427419DF3007FA045 /* FriendsVIewModel.swift in Sources */,
+				A2DF84262741A54F007FA045 /* TouchGestureViewModifier.swift in Sources */,
 				A28873A127304D0500E0F3E1 /* SingIn.swift in Sources */,
 				A2DF841227419DA7007FA045 /* Builders.swift in Sources */,
 			);
