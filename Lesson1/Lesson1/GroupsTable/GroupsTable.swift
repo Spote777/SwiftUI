@@ -8,22 +8,39 @@
 import SwiftUI
 
 struct GroupsTable: View {
+    @ObservedObject var viewModel: GroupViewModel
     
-    private var groups: [GroupModel] = [
-        GroupModel(name: "GeekBrains: iOS - разработка", avatar: ""),
-        GroupModel(name: "Музыка", avatar: ""),
-        GroupModel(name: "Бавария", avatar: ""),
-        GroupModel(name: "Итальянский язык", avatar: ""),
-        GroupModel(name: "Строим дом", avatar: "")
-    ]
-    
+    init(viewModel: GroupViewModel) {
+        self.viewModel = viewModel
+    }
     
     var body: some View {
-        List(groups) { group in
-            NamesPrototype(model: group)
+        List(viewModel.groups) { group in
+            NavigationLink(destination: GroupPageView(group: group)) {
+                GroupRowView(group: group)
+            }
         }
+        .modifier(PlainList())
+        .onAppear { viewModel.fetch() }
     }
 }
+//struct GroupsTable: View {
+//
+//    private var groups: [GroupModel] = [
+//        GroupModel(name: "GeekBrains: iOS - разработка", avatar: ""),
+//        GroupModel(name: "Музыка", avatar: ""),
+//        GroupModel(name: "Бавария", avatar: ""),
+//        GroupModel(name: "Итальянский язык", avatar: ""),
+//        GroupModel(name: "Строим дом", avatar: "")
+//    ]
+//
+//
+//    var body: some View {
+//        List(groups) { group in
+//            NamesPrototype(model: group)
+//        }
+//    }
+//}
 
 
 //struct ContentView_Previews: PreviewProvider {

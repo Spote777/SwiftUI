@@ -15,14 +15,14 @@ struct MainView: View {
     
     var body: some View {
         TabView(selection: $selectedTab) {
-            FriendsTable()
+            FriendsTable(viewModel: FriendViewModel(FriendAPI()))
                 .tabItem {
                     Image(systemName: "person.3.fill")
                     Text(tabs[0])
                 }
                 .tag(0)
             
-            GroupsTable()
+            GroupsTable(viewModel: GroupViewModel(GroupAPI()))
                 .tabItem {
                     Image(systemName: "bookmark.circle.fill")
                     Text(tabs[1])
