@@ -1,5 +1,5 @@
 //
-//  Lesson1App.swift
+//  SwiftUI-LessonApp.swift
 //  Lesson1
 //
 //  Created by Павел Заруцков on 23.10.2021.
