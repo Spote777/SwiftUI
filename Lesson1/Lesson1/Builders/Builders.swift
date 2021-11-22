@@ -25,7 +25,7 @@ struct AvatarImage: View {
             .scaleEffect(scaleFactor)
             .animation(.spring(response: 0.2, dampingFraction: 0.35, blendDuration: 0.25))
             .onTouchGesture(
-                touchBegan: { withAnimation { self.scaleFactor = 1.25 } },
+                touchBegan: { withAnimation { self.scaleFactor = 1.2 } },
                 touchEnd: { _ in withAnimation { self.scaleFactor = 1.0 } }
             )
     }

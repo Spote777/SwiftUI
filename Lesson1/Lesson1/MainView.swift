@@ -9,32 +9,33 @@ import SwiftUI
 
 struct MainView: View {
     
-    private let tabs = ["Друзья", "Группы", "Новости"]
+    private let tabs = ["Друзья", "Фото", "Группы"]
     
     @State private var selectedTab = 0
     
     var body: some View {
         TabView(selection: $selectedTab) {
             FriendsTable(viewModel: FriendViewModel(FriendAPI()))
+                .navigationBarTitle(tabs[0], displayMode: .automatic)
                 .tabItem {
                     Image(systemName: "person.3.fill")
                     Text(tabs[0])
                 }
             
-            GroupsTable(viewModel: GroupViewModel(GroupAPI()))
-                .tabItem {
-                    Image(systemName: "bookmark.circle.fill")
-                    Text(tabs[1])
-                }
-
-            
-            NewsTable()
+            PhotoTable(viewModel: PhotoViewModel(PhotoAPI()))
+                .navigationBarTitle(tabs[1], displayMode: .automatic)
                 .tabItem {
                     Image(systemName: "newspaper")
+                    Text(tabs[1])
+                }
+                       
+            GroupsTable(viewModel: GroupViewModel(GroupAPI()))
+                .navigationBarTitle(tabs[2], displayMode: .automatic)
+                .tabItem {
+                    Image(systemName: "bookmark.circle.fill")
                     Text(tabs[2])
                 }
         }
-        .navigationBarTitle(tabs[selectedTab], displayMode: .inline)
         .navigationBarBackButtonHidden(true)
     }
 }

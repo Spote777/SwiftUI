@@ -8,7 +8,6 @@
 import Foundation
 
 protocol SameDataSetProtocol {
-    
     var name:   String { get set }
     var avatar: String { get set }
 }
